@@ -7,12 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 <div id="app">
 
     <form class="vue-form" @submit="submit">
-        <fieldset>
             <legend>Vue Contact Form</legend>
             <div>
                 <label class="label" for="name">Name</label>
@@ -20,12 +20,11 @@
             </div>
             <div>
                 <label class="label" for="password">Password</label>
-                <input type="password" name="password" id="password" required="" v-model="password">
+                <input type="text" name="password" id="password" required="" v-model="password">
             </div>
             <div>
                 <input type="submit" value="Send Form">
             </div>
-        </fieldset>
     </form>
 
     <div class="debug">
