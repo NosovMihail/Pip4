@@ -11,6 +11,7 @@ class GetPointsController {
 
     @GetMapping("/points")
     fun greeting(): Point {
+
         return Point("me", 123.0,123.0, 123.0)
     }
 }

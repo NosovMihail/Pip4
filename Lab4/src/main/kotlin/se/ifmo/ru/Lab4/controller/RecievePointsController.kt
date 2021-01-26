@@ -19,6 +19,7 @@ class RecievePointsController{
                  @RequestParam(value = "y", defaultValue = "0.0") y: Double,
                  @RequestParam(value = "r", defaultValue = "1") r: Double
     ):Point{
+        System.out.println("They sent a point!")
         val point=Point("me", x,y, r)
         pointRepository.save(point)
         return point
