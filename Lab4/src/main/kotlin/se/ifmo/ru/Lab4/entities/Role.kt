@@ -1,6 +1,6 @@
 package se.ifmo.ru.Lab4.entities
 
-import User
+import se.ifmo.ru.Lab4.entities.User
 import javax.persistence.ManyToMany
 import org.springframework.security.core.GrantedAuthority
 import javax.persistence.Entity

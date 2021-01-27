@@ -32,7 +32,7 @@ class Point : Serializable {
     constructor() {}
 
     private fun checkCoordinates(x: Double, y: Double, r: Double): Boolean {
-        return x <= 0 && y >= 0 && x >= -r && y <= r / 2 || x >= 0 && y >= 0 && y <= (x - r / 2) * -2 ||
+        return x <= 0 && y >= 0 && y <= (x + r/2) || x <= 0 && y <= 0 && x >= -r && y >= -r/2 ||
                 x >= 0 && y <= 0 && x * x + y * y <= Math.pow(r, 2.0)
     }
 
