@@ -1,17 +1,19 @@
 package se.ifmo.ru.Lab4.controller
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import se.ifmo.ru.Lab4.entities.Point
-import java.util.concurrent.atomic.AtomicLong
+import se.ifmo.ru.Lab4.repositories.PointRepository
 
 @RestController
 class GetPointsController {
-    private val counter = AtomicLong()
-
+    @Autowired
+    lateinit var pointRepository: PointRepository
     @GetMapping("/points")
-    fun greeting(): Point {
+    fun getPoints(): MutableIterable<Point> {
 
-        return Point("me", 123.0,123.0, 123.0)
+
+        return pointRepository.findAll()
     }
 }
