@@ -32,9 +32,7 @@ Vue.component('login-form', {
     methods: {
         save: function() {
             var message = {name: this.name, password: this.password};
-            if(messageApi.get(message).equals("true")) {
-                window.location.href = '/pointcheck'
-            }
+            messageApi.get(message).then(data => data.data ? window.location.href = '/pointcheck' : console.log(data));
         }
     }
 });

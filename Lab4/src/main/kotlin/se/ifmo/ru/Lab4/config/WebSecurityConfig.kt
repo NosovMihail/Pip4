@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.crypto.password.NoOpPasswordEncoder
 import javax.sql.DataSource
+import kotlin.jvm.Throws
 
 
 @Configuration

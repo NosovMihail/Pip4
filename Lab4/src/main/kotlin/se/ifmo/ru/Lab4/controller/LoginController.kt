@@ -3,6 +3,7 @@ package se.ifmo.ru.Lab4.controller
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.jpa.repository.Query
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -13,7 +14,7 @@ import se.ifmo.ru.Lab4.repositories.UserRepository
 class LoginController {
     @Autowired
     lateinit var userRepository: UserRepository
-    @PostMapping("/login")
+    @GetMapping("/login")
     fun login(@RequestParam(value = "name") name: String,
               @RequestParam(value = "password") password: String): Boolean {
         val passwordEncoder = BCryptPasswordEncoder()

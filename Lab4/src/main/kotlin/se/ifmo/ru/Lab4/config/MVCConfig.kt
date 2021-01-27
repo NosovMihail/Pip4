@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
 
 
 
-@Configuration
+//@Configuration
 class MVCConfig: WebMvcConfigurer {
      override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
         registry
